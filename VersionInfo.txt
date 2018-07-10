@@ -1,0 +1,30 @@
+1.0
+-> 1.1
+- optimized thresholding for img2bwThresholding.m used for RSouterbound -> slighliy different SAT Volume...
+- removed some "UseSlice" buggs
+- imporved T1Mapper Gui
+
+-> 1.2
+- FatSegment: implemented RS_BodyBounds.m as autosegmentation function for all boundaries
+- introduced saving of time stamps of Dicomflex framework tasks (load data, slice select,....)
+- FatSegment: reimplanted hemiFat similar to femurbox
+- FatSegment: XLS files will save the summary Fat values from Landmarks 'FK' to 'ZF'
+- FatSegment: contourTracking on/off implemented (when drawing with the mouse, it searches in the proxim area for the strongest contour)
+- FatSegment: 'x' key will switch between contourTracking on/off
+
+-> 1.21
+- FatSegment: HemiLine was not stored in the Session file - Solved
+- FatSegment: HimeLine and FemurRect mode improved
+- FatSegment: "AutoSegmentAll" segements now Slices from FK to ZF only
+
+-> 1.22
+- FatSegment: "AutoSegmentAll" segements now Slices from BB to ZF only
+- FatSegment: XLS files will save the summary Fat values from Landmarks 'BB' to 'ZF'
+- FatSegment: FemurBox showed wrong size due to rounding of matlab function createmask(hRect). The created mask was in general to small - solved
+
+-> 1.23
+- cCompute.mGetImgPathes: when mor folder search results appear, they will be only folders
+- FatSegment: changed mSetHemiLine y22 definition to imgSize(1) from imgSize(2)
+- ConfigApplication_template FatSegement: "xlsSaveRange" added and implemented in cComputeFatSegment
+- ConfigApplication_template FatSegement: "doSliceSpacingInterpolation" added and implemented in cComputeFatSegment
+- zoom view bug behoben (probleme bei nicht quadratischen Bilddaten)

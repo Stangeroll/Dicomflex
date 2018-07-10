@@ -1,0 +1,74 @@
+{
+	"cfg_framework_version": "0.3.0",
+	"programName": "Dicomflex",
+	"datAutoSaveTime": 300,
+	"apperance": {
+		"borderWidth": 2,
+		"designColor1": [0.462,0.79,1],
+		"backGroundColor": [0.1,0.1,0.1],
+		"elementBorderColor": [0.231,0.395,0.5],
+		"color2": [0,0,0],
+		"color3": [0.95,0.95,0.95],
+		"color4": [0,0.45,0.74]
+	},
+	"menu": [
+		{
+			"path": [
+				"File",
+				"Load"
+			],
+			"callback": "@oCont.mLoadData"
+		},
+		{
+			"path": [
+				"File",
+				"Save"
+			],
+			"callback": "@oCont.mSaveData"
+		},
+		{
+			"path": [
+				"File",
+				"Import..."
+			],
+			"callback": "@(varargin)oCont.mLoadData('Import', 'ISAT-DataFile')"
+		},
+		{
+			"path": [
+				"File",
+				"Clone Tool"
+			],
+			"callback": "@oCont.mCloneSoftware"
+		},
+		{
+			"path": [
+				"Functions",
+				"Undo    Ctr+Z"
+			],
+			"callback": "@(varargin)oCont.mMakeUndo"
+		},
+		{
+			"path": [
+				"Image Display",
+				"Image Zoom"
+			],
+			"callback": "@oCont.mCreateZoomView"
+		},
+		{
+			"path": [
+				"Info",
+				"Hotkeys"
+			],
+			"callback": "@(varargin)oCont.mMenuCallback(@(tabDat)oCont.oComp.mShowHotkeyInfo(oCont))"
+		}
+	],
+	"loadImgInMemory": 1,
+	"GS1": 25,
+	"GS2": 7,
+	"minfH": 768,
+	"minfW": 1024,
+	"table": {
+		"cellSelectionCallback": "@oCont.mTableCellSelect",
+		"cellEditCallback": "@oCont.mTableCellEdit"
+	}
+}

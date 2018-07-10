@@ -1,0 +1,195 @@
+{
+	"cfg_application_version": "0.6.0",
+	"applicationName": "T1Mapper",
+	"datFileSearchString": [
+		"*T1*data.mat",
+		"*T1Mapper*data*.mat",
+		"*T1RelaxFitMRoi_*data.mat",
+		"*data*.mat"
+	],
+	"lastLoadPath": "W:\\RAD\\RAD-Physik\\Papers\\02 - Hot\\FF T1\\Roland\\Figures",
+	"imgNames": [
+		"Ti"
+	],
+	"standardImgType": "Ti",
+	"imgSearchName": [
+		[
+			"*.dcm"
+		]
+	],
+	"imgSearchDir": [
+		[
+			"*STIR*"
+		]
+	],
+	"imgAxis": {
+		"visible": "on",
+		"height": 0.75
+	},
+	"graphAxis": {
+		"visible": "on",
+		"height": 0.25,
+		"xBorderGap": [30,20],
+		"yBorderGap": [50,2]
+	},
+	"textBox": {
+		"visible": "on",
+		"height": 0.5
+	},
+	"color1": [1,0,0],
+	"color2": [0,0,1],
+	"color3": [0,1,0],
+	"color4": [0,0.45,0.74],
+	"color5": [0.85,0.33,0.1],
+	"color6": [0.93,0.69,0.13],
+	"color7": [0.49,0.18,0.56],
+	"color8": [0.47,0.67,0.19],
+	"color9": [0.3,0.75,0.93],
+	"cComputeFcn": "cComputeT1Mapper",
+	"imgFcn": "cImageDcm",
+	"saveDatFcn": [
+		"oCont.oComp.mSaveXls(oCont)"
+	],
+	"closeRequestFcn": "oCont.oComp.mCloseReq(oCont)",
+	"imageDisplayMode": "T1 Map",
+	"imageNr": 1,
+	"showBoundInfo": 1,
+	"showPxlInfo": 1,
+	"showZoomFig": 1,
+	"menu": [
+		{
+			"path": [
+				"Image Display",
+				"Raw Images"
+			],
+			"callback": "@oCont.mImageDisplayMode"
+		},
+		{
+			"path": [
+				"Image Display",
+				"T1 Map"
+			],
+			"callback": "@oCont.mImageDisplayMode"
+		},
+		{
+			"path": [
+				"Image Display",
+				"T1 Gradient"
+			],
+			"callback": "@oCont.mImageDisplayMode"
+		},
+		{
+			"path": [
+				"ModeFunctions",
+				"Calc T1 value of Roi"
+			],
+			"callback": "@(varargin)oCont.mMenuCallback(@(oComp)oCont.oComp.mFitMeanRoi(oCont))"
+		},
+		{
+			"path": [
+				"ModeFunctions",
+				"Calc T1 of Roi pxls"
+			],
+			"callback": "@(varargin)oCont.mMenuCallback(@(oComp)oCont.oComp.mFitBoundPxls(oCont))"
+		},
+		{
+			"path": [
+				"ModeFunctions",
+				"Calc T1 Map of Slice"
+			],
+			"callback": "@(varargin)oCont.mMenuCallback(@(oComp)oCont.oComp.mFitAllPxls(oCont))"
+		},
+		{
+			"path": [
+				"ModeFunctions",
+				"Calc all T1 Maps"
+			],
+			"callback": "@(varargin)oCont.mMenuCallback(@(oComp)oCont.oComp.mFitAllSlices(oCont))"
+		},
+		{
+			"path": [
+				"Functions",
+				"Copy Boundaries"
+			],
+			"callback": "@(varargin)oCont.mMenuCallback(@(oComp)oCont.oComp.mCopyBound(oCont))"
+		},
+		{
+			"path": [
+				"Functions",
+				"Paste Boundaries"
+			],
+			"callback": "@(varargin)oCont.mMenuCallback(@(oComp)oCont.oComp.mPasteBound(oCont))"
+		},
+		{
+			"path": [
+				"ModeFunctions",
+				"Show Bound Info"
+			],
+			"callback": "@(varargin)oCont.mMenuCallback(@(oComp)oCont.oComp.mGenBoundInfoFig(oCont))"
+		},
+		{
+			"path": [
+				"ModeFunctions",
+				"Save ROI Results"
+			],
+			"callback": "@(varargin)oCont.mMenuCallback(@(oComp)oCont.oComp.mSaveRoiResults(oCont))"
+		}
+	],
+	"table": {
+		"columnName": [
+			"Pos"
+		],
+		"associatedFieldNames": [
+			"pSliceLocation"
+		],
+		"columnFormat": [
+			"numeric"
+		],
+		"columnEditable": 0,
+		"columnWidth": 100,
+		"visible": "on",
+		"height": 0.5
+	},
+	"key": {
+		"deleteContour": "escape",
+		"showFit": "f",
+		"fitData": "space",
+		"nextImage": "add",
+		"previousImage": "subtract"
+	},
+	"contour": {
+		"names": [
+			"SAT",
+			"VAT",
+			"Seg3",
+			"Seg4",
+			"Seg5",
+			"Seg6",
+			"Seg7",
+			"Seg8",
+			"Seg9"
+		],
+		"colors": [
+			"blue",
+			"red",
+			"green",
+			"red",
+			[0.85,0.33,0.1],
+			"green",
+			[0.49,0.18,0.56],
+			[0.47,0.67,0.19],
+			[0.3,0.75,0.93]
+		],
+		"keyAssociation": [
+			"1",
+			"2",
+			"3",
+			"4",
+			"5",
+			"6",
+			"7",
+			"8",
+			"9"
+		]
+	}
+}

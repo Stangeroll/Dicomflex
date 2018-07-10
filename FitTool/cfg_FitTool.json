@@ -1,0 +1,56 @@
+{
+	"cfgVersion": "0.0.1",
+	"programName": "FitTool by Roland Stange",
+	"apperance": {
+		"color1": [1,1,1],
+		"color2": [0,0,0],
+		"color3": [0.95,0.95,0.95],
+		"color4": [0,0.45,0.74]
+	},
+	"imgAxis": {
+		"height": 0.85
+	},
+	"table": {
+		"ColumnName": [
+			"Parameter",
+			"Start",
+			"Lower",
+			"Upper",
+			"Current"
+		],
+		"ColumnFormat": [
+			"char",
+			"numeric",
+			"numeric",
+			"numeric",
+			"numeric"
+		],
+		"ColumnEditable": [1,1,1,1,1],
+		"ColumnWidth": [
+			60,
+			60,
+			40,
+			40,
+			100
+		]
+	},
+	"menu": [
+		{
+			"path": [
+				"File",
+				"Load"
+			],
+			"callback": "@d.loadData"
+		},
+		{
+			"path": [
+				"File",
+				"Save"
+			],
+			"callback": "@d.saveData"
+		}
+	],
+	"GS1": 25,
+	"GS2": 7,
+	"minfH": 500
+}

@@ -1,0 +1,149 @@
+<deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
+  <configuration build-checksum="3371136460" file="C:\Users\StangeR\Dropbox\UniKlinik\MatlabSource\DicomFlex\DicomFlex.prj" location="C:\Users\StangeR\Dropbox\UniKlinik\MatlabSource\DicomFlex" name="DicomFlex" preferred-package-location="C:\Users\StangeR\Dropbox\UniKlinik\MatlabSource\DicomFlex\build\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
+    <param.appname>DicomFlex</param.appname>
+    <param.icon />
+    <param.icons />
+    <param.version>1.23</param.version>
+    <param.authnamewatermark>Roland Stange</param.authnamewatermark>
+    <param.email>Roland.Stange@medizin.Uni-Leipzig.de</param.email>
+    <param.company>University Hospital Leipzig</param.company>
+    <param.summary />
+    <param.description />
+    <param.screenshot>${PROJECT_ROOT}\IconDicomflex.PNG</param.screenshot>
+    <param.guid />
+    <param.installpath.string>\University Hospital Leipzig\DicomFlex\</param.installpath.string>
+    <param.installpath.combo>option.installpath.programfiles</param.installpath.combo>
+    <param.logo />
+    <param.install.notes />
+    <param.target.install.notes />
+    <param.intermediate>${PROJECT_ROOT}\build\for_testing</param.intermediate>
+    <param.files.only>${PROJECT_ROOT}\build\for_redistribution_files_only</param.files.only>
+    <param.output>${PROJECT_ROOT}\build\for_redistribution</param.output>
+    <param.logdir>${PROJECT_ROOT}\build</param.logdir>
+    <param.enable.clean.build>false</param.enable.clean.build>
+    <param.user.defined.mcr.options />
+    <param.embed.ctf>true</param.embed.ctf>
+    <param.target.type>subtarget.standalone</param.target.type>
+    <param.support.packages />
+    <param.web.mcr>true</param.web.mcr>
+    <param.package.mcr>false</param.package.mcr>
+    <param.no.mcr>false</param.no.mcr>
+    <param.web.mcr.name>MyAppInstaller_web</param.web.mcr.name>
+    <param.package.mcr.name>MyAppInstaller_mcr</param.package.mcr.name>
+    <param.no.mcr.name>MyAppInstaller_app</param.no.mcr.name>
+    <param.windows.command.prompt>true</param.windows.command.prompt>
+    <param.create.log>false</param.create.log>
+    <param.log.file />
+    <unset>
+      <param.icon />
+      <param.icons />
+      <param.summary />
+      <param.description />
+      <param.guid />
+      <param.installpath.string />
+      <param.installpath.combo />
+      <param.logo />
+      <param.target.install.notes />
+      <param.enable.clean.build />
+      <param.user.defined.mcr.options />
+      <param.embed.ctf />
+      <param.target.type />
+      <param.support.packages />
+      <param.web.mcr />
+      <param.package.mcr />
+      <param.no.mcr />
+      <param.web.mcr.name />
+      <param.package.mcr.name />
+      <param.no.mcr.name />
+      <param.windows.command.prompt />
+      <param.create.log />
+      <param.log.file />
+    </unset>
+    <fileset.main>
+      <file>${PROJECT_ROOT}\cControl.m</file>
+    </fileset.main>
+    <fileset.resources>
+      <file>${PROJECT_ROOT}\cBoundary.m</file>
+      <file>${PROJECT_ROOT}\cBoundaryFit.m</file>
+      <file>${PROJECT_ROOT}\cCompute.m</file>
+      <file>${PROJECT_ROOT}\cComputeFatSegment.m</file>
+      <file>${PROJECT_ROOT}\cComputeT1Mapper.m</file>
+      <file>${PROJECT_ROOT}\cfg_application_FatSegment.json</file>
+      <file>${PROJECT_ROOT}\cfg_application_T1Mapper.json</file>
+      <file>${PROJECT_ROOT}\cfg_framework.json</file>
+      <file>${PROJECT_ROOT}\cImage.m</file>
+      <file>${PROJECT_ROOT}\cImageDcm.m</file>
+      <file>C:\Users\StangeR\Dropbox\UniKlinik\MatlabSource\FitTool\cfg_FitTool.json</file>
+      <file>C:\Users\StangeR\Dropbox\UniKlinik\MatlabSource\FitTool\FitTool.m</file>
+      <file>C:\Users\StangeR\Dropbox\UniKlinik\MatlabSource\FitTool\rsFitObj.m</file>
+    </fileset.resources>
+    <fileset.package>
+      <file>${PROJECT_ROOT}\cfg_application_FatSegment.json</file>
+      <file>${PROJECT_ROOT}\cfg_application_T1Mapper.json</file>
+      <file>${PROJECT_ROOT}\cfg_framework.json</file>
+      <file>C:\Users\StangeR\Dropbox\UniKlinik\MatlabSource\FitTool\cfg_FitTool.json</file>
+    </fileset.package>
+    <fileset.depfun>
+      <file>${PROJECT_ROOT}\cComputeDummy.m</file>
+      <file>${PROJECT_ROOT}\subfun\boundary.m</file>
+      <file>${PROJECT_ROOT}\subfun\boundaryFit.m</file>
+      <file>${PROJECT_ROOT}\subfun\checkBoundaryAppropriateness.m</file>
+      <file>${PROJECT_ROOT}\subfun\DconvV2.m</file>
+      <file>${PROJECT_ROOT}\subfun\FitTool.m</file>
+      <file>${PROJECT_ROOT}\subfun\getProgrammPath.m</file>
+      <file>${PROJECT_ROOT}\subfun\img.m</file>
+      <file>${PROJECT_ROOT}\subfun\img2bwThresholding.m</file>
+      <file>${PROJECT_ROOT}\subfun\imgDcm.m</file>
+      <file>${PROJECT_ROOT}\subfun\imgFat.m</file>
+      <file>${PROJECT_ROOT}\subfun\isat.m</file>
+      <file>${PROJECT_ROOT}\subfun\jsonopt.m</file>
+      <file>${PROJECT_ROOT}\subfun\kmeans.m</file>
+      <file>${PROJECT_ROOT}\subfun\loadjson.m</file>
+      <file>${PROJECT_ROOT}\subfun\localMaximum.m</file>
+      <file>${PROJECT_ROOT}\subfun\makeLinePoints.m</file>
+      <file>${PROJECT_ROOT}\subfun\mergestruct.m</file>
+      <file>${PROJECT_ROOT}\subfun\NikitaFat160322Segmenting.m</file>
+      <file>${PROJECT_ROOT}\subfun\NikitaFat161213Segmenting.m</file>
+      <file>${PROJECT_ROOT}\subfun\pointDist.m</file>
+      <file>${PROJECT_ROOT}\subfun\region_seg.m</file>
+      <file>${PROJECT_ROOT}\subfun\regiongrowing.m</file>
+      <file>${PROJECT_ROOT}\subfun\RS_BodyBounds.m</file>
+      <file>${PROJECT_ROOT}\subfun\rsFitObj.m</file>
+      <file>${PROJECT_ROOT}\subfun\RSinnerBound.m</file>
+      <file>${PROJECT_ROOT}\subfun\RSouterBound.m</file>
+      <file>${PROJECT_ROOT}\subfun\savejson.m</file>
+      <file>${PROJECT_ROOT}\subfun\setStructArrayField.m</file>
+      <file>${PROJECT_ROOT}\subfun\struct2jdata.m</file>
+      <file>${PROJECT_ROOT}\subfun\subdir.m</file>
+      <file>${PROJECT_ROOT}\subfun\tabDat.m</file>
+      <file>${PROJECT_ROOT}\subfun\tabDatFatSegmentIOphase.m</file>
+      <file>${PROJECT_ROOT}\subfun\tabDatT1RelaxFitMRoi.m</file>
+      <file>${PROJECT_ROOT}\subfun\varargin2struct.m</file>
+    </fileset.depfun>
+    <build-deliverables>
+      <file location="${PROJECT_ROOT}\build\for_testing" name="splash.png" optional="false">C:\Users\StangeR\Dropbox\UniKlinik\MatlabSource\DicomFlex\build\for_testing\splash.png</file>
+      <file location="${PROJECT_ROOT}\build\for_testing" name="readme.txt" optional="true">C:\Users\StangeR\Dropbox\UniKlinik\MatlabSource\DicomFlex\build\for_testing\readme.txt</file>
+      <file location="${PROJECT_ROOT}\build\for_testing" name="DicomFlex.exe" optional="false">C:\Users\StangeR\Dropbox\UniKlinik\MatlabSource\DicomFlex\build\for_testing\DicomFlex.exe</file>
+    </build-deliverables>
+    <workflow />
+    <matlab>
+      <root>C:\Program Files\MATLAB\R2016b</root>
+      <toolboxes />
+    </matlab>
+    <platform>
+      <unix>false</unix>
+      <mac>false</mac>
+      <windows>true</windows>
+      <win2k>false</win2k>
+      <winxp>false</winxp>
+      <vista>false</vista>
+      <linux>false</linux>
+      <solaris>false</solaris>
+      <osver>6.1</osver>
+      <os32>false</os32>
+      <os64>true</os64>
+      <arch>win64</arch>
+      <matlab>true</matlab>
+    </platform>
+  </configuration>
+</deployment-project>
